@@ -1,0 +1,72 @@
+div#list {
+    position: relative;
+    height: 35.7rem;
+    width: max-content;
+    background: lightgray;
+    margin: 0 auto;
+    overflow-y: auto;
+  }
+  
+  div#header {
+    width: max-content;
+    height: 5%;
+    background: #E3E7E8;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    padding-left:0px;
+    font-size:2em;
+  }
+  
+  div#list > div#lbody {
+    width: max-content;
+    height: 100%;
+    background: #EBF0F2;
+    padding: 10px;
+    margin: 0 auto;
+    padding-left:0px;
+  }
+  
+  div#list > div#lbody > div#profile {
+    position: relative;
+    width: 100px;
+    height: 130px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+  }
+  
+  div#list > div#lbody > div#profile > a >div#pic {
+    width: 5em;
+    height: 5em;
+    border-radius: 5em;
+    -webkit-border-radius: 5em;
+    -mozilla-border-radius: 5em;
+    margin: 0 auto;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNIfDgxrHCNM3rxNayl6Z6mUclTdiosmnXNT_JKC1nPsfi7r56Gw");
+    background-size: 100px 100px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  
+  div#list > div#lbody > div#profile > a > span {
+    position: absolute;
+    width: 100%;
+    line-height: 15px;
+    bottom: 0;
+    background: #EBF0F2;
+    color:#000;
+    font-style:italic;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+  }
+  div#list > div#lbody > div#profile > a > span > label#name{
+    font-size:1em;
+  }
+  div#list > div#lbody > div#profile > a > span > label#info{  
+    font-size:.8em;
+  }
+  

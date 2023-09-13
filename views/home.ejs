@@ -1,0 +1,82 @@
+
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/friends.css">
+
+   <!-- <%if(locals.user){%>
+   <form action="/post/create" method="POST" style=" margin-top: 4rem;margin-left: 6rem;margin-right: 6rem;" class="form-floating">
+    <textarea class="form-control"  id="floatingTextarea" name="content" style="height: 7rem;"></textarea>
+    <label for="floatingTextarea">Whats On Your Mind?</label>
+    <input style="margin-top: 1rem;" type="submit">
+    </form>
+ <%}%>
+   -->
+ 
+   <div style="display: flex;">
+    <div class="feed" >
+      
+        <% for(let i=0; i<posts.length; i++){ %>
+
+        <div class="tweet-box">
+          <div class="tweet-avatar">
+            <img src="https://sun9-27.userapi.com/impg/t7yBG605cnN8FL2oi63irgS4RBHpOr8UtS0XVg/CyoZF23RNZY.jpg?size=1200x835&quality=95&sign=9e3c7ffd2fa67df38259082e421dadca&type=album" alt="avatar" class="avatar-img"/>
+          </div>
+          
+          <div class="tweet-body">
+            <div class="tweet-user-data">
+              <div class="tweet-nickname">
+                <%=posts[i].user.name %>
+              </div>
+              <div class="tweet-username">
+                @<%=posts[i].user.email %>
+              </div>
+            </div>
+            <div class="tweet-content">
+              <div class="tweet-text">
+                <%=posts[i].content %> 
+              </div>
+            </div>
+            <%if(locals.user){%>
+              <a href="/comments/showcomments/<%=posts[i]._id%>">comments(<%=posts[i].comments.length%>)</a>
+              <%}%>
+          </div>
+         
+          <%if( (locals.user) && (locals.user.email==posts[i].user.email) ){%>
+            <a class="class="btn btn-danger" href="/post/destroy/<%=posts[i]._id%>">Delete</a>
+            <%}%>
+        </div>
+        <% } %>
+
+         
+      </div>
+
+      <%if(locals.user){%>
+      <div  id="list">
+        <div id="header">
+          Friends
+        </div>
+        <hr/>
+        <div id="lbody">
+
+         <% for(let i=0; i<users.length; i++){ %>
+          <div id="profile">
+            <a href="/users/profile/<%=users[i]._id%>">
+              <div id="pic"></div>
+              <span>
+                <label id="name"><%=users[i].name%></label>
+                <label id="info"><%=users[i].email%></label>
+              </span>
+            </a>
+          </div>
+      
+        <% } %>
+      
+      
+            </div>  
+      </div>
+       <%}%>
+    </div>  
+    
+
+    
+
+

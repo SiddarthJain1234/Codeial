@@ -1,0 +1,79 @@
+body{
+    background-color: lightblue;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  
+  
+  .feed {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 90%; */
+    margin-left: 6rem;
+      display: flex;
+      margin-right: 6rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+  }
+  
+  .tweet-box {
+      display: flex;
+      flex-direction: row;
+      flex-basis: calc(50% - 10px);
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin: 5px;
+      padding: 10px;
+      width: 50%;
+      height: auto;
+      border: 10px solid #DDD;
+      border-radius: 5px;
+      background-color: rgba(255,255,255, 1);
+  }
+  
+  .tweet-avatar {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .avatar-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 34px;
+  }
+  
+  .tweet-body {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+  }
+  
+  .tweet-user-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .tweet-nickname {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .tweet-username {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .tweet-text {
+    font-size: 1.2em;
+  }
+  
